@@ -1,0 +1,116 @@
+package com.mmall.model;
+
+/**
+ * 部门表：
+ * id:部门id
+ * name:部门名称
+ * parent_id:上级部门的id
+ * level：部门层级
+ * seq:部门在当前层级下的顺序
+ * remark：备注
+ * operator：操作人
+ * operate_time：最后一次操作时间
+ * operate_ip：最有一次更新操作者的IP地址
+ */
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.NoArgsConstructor;
+import lombok.ToString;
+
+import java.util.Date;
+
+@Builder
+@NoArgsConstructor
+@AllArgsConstructor
+@ToString
+public class SysDept {
+    private Integer id;
+
+    private String name;
+
+    private Integer parentId;
+
+    private String level;
+
+    private Integer seq;
+
+    private String remark;
+
+    private String operator;
+
+    private Date operateTime;
+
+    private String operateIp;
+
+    public Integer getId() {
+        return id;
+    }
+
+    public void setId(Integer id) {
+        this.id = id;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name == null ? null : name.trim();
+    }
+
+    public Integer getParentId() {
+        return parentId;
+    }
+
+    public void setParentId(Integer parentId) {
+        this.parentId = parentId;
+    }
+
+    public String getLevel() {
+        return level;
+    }
+
+    public void setLevel(String level) {
+        this.level = level == null ? null : level.trim();
+    }
+
+    public Integer getSeq() {
+        return seq;
+    }
+
+    public void setSeq(Integer seq) {
+        this.seq = seq;
+    }
+
+    public String getRemark() {
+        return remark;
+    }
+
+    public void setRemark(String remark) {
+        this.remark = remark == null ? null : remark.trim();
+    }
+
+    public String getOperator() {
+        return operator;
+    }
+
+    public void setOperator(String operator) {
+        this.operator = operator == null ? null : operator.trim();
+    }
+
+    public Date getOperateTime() {
+        return operateTime;
+    }
+
+    public void setOperateTime(Date operateTime) {
+        this.operateTime = operateTime;
+    }
+
+    public String getOperateIp() {
+        return operateIp;
+    }
+
+    public void setOperateIp(String operateIp) {
+        this.operateIp = operateIp == null ? null : operateIp.trim();
+    }
+}
